@@ -1,0 +1,130 @@
+/* max width 1200px */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* max width 1024px */
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 52%;
+    }
+    header h1 {
+        font-size: 5rem;
+    }
+}
+
+/* max width 980px */
+@media only screen and (max-width: 980px) {
+    header h1 {
+        font-size: 4.5rem;
+    }
+}
+
+/* max width 768px */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    header h1 {
+        font-size: 4rem;
+    }
+    .animatad-icon{
+        width: 40rem;
+        height: 40rem;
+    }
+    .animatad-icon .laptop {
+        height: 40rem;
+    }
+    .animatad-icon .html,
+    .animatad-icon .js,
+    .animatad-icon .css {
+        width: 7rem;
+        left: 18rem;
+        top: 20rem;
+    }
+    .animatad-icon .js {
+        left: 29rem;
+        top: 7rem;
+    }
+    .animatad-icon .css {
+        left: 9rem;
+        top: 8rem;
+    }
+    .btn {
+        width: 16rem;
+    }
+    #about .about-box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-h2 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #skill table {
+        width: 50%;
+    }
+    #services .services-box {
+        width: 48%;
+        margin: 1%;
+    }
+    .work-box {
+        width: 48%;
+    }
+    .work-menu-box .work-menu {
+        left: -10.6rem;
+    }
+}
+
+/* max width 480px */
+@media only screen and (max-width:480px) {
+    header {
+        height: 80vh;
+    }
+    header h1 {
+        font-size: 5rem;
+    }
+    nav .nav-menu-box .all-device-menu {
+        display: none;
+    }
+    nav .nav-menu-box .menu-icon {
+        display: block;
+    }
+    .header-section {
+        flex-wrap: wrap;
+        padding-top: 15rem;
+    }
+    #skill table {
+        width: 100%;
+    }
+    #services .services-box {
+        width: 100%;
+        margin: 2% 0;
+    }
+    .work-box {
+        width: 100%;
+        margin: 2% 0;
+    }
+    #contact .row {
+        flex-wrap: wrap;
+    }
+    .contact-a {
+        width: 100%;
+    }
+    .contact-b {
+        width: 100%;
+    }
+    .contact-b form {
+        margin-top: 3rem;
+    }
+    .contact-b form {
+        padding: 0;
+    }
+    footer .row {
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+    }
+}
