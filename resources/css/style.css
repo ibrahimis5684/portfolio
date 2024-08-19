@@ -266,13 +266,13 @@ header nav {
     z-index: 9999;
 }
 header nav .logo-box img {
-    height: 5rem;
+    width: 25rem;
 }
 nav .nav-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 10%;
+    padding: 1rem 10%;
 }
 .nav-row .small-menu {
     display: none;
