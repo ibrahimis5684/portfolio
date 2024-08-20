@@ -1,29 +1,3 @@
-document.getElementById('binary').addEventListener('click', function() {
-    var ul = this.nextElementSibling;
-    var icons = this.querySelectorAll('.fa-angle-right'); // Using querySelectorAll to target all icons
-
-    // Toggle display of the nested list
-    if (ul.style.display === "block") {
-        ul.style.display = "none";
-        icons.forEach(function(icon) {
-            icon.classList.add('rotate-b'); // Add rotate class to each icon
-        });
-    } else {
-        ul.style.display = "block";
-        icons.forEach(function(icon) {
-            icon.classList.remove('rotate-b'); // Remove rotate class from each icon
-        });
-    }
-
-    // Toggle background color and text color
-    if (this.style.backgroundColor === "rgb(255, 255, 255)") { // RGB value for #007bff
-        this.style.backgroundColor = "#007bff"; // Change to white background
-        this.style.color = "#ffffff"; // Change to dark text color
-    } else {
-        this.style.backgroundColor = "#ffffff"; // Change to blue background
-        this.style.color = "#474747"; // Change to white text color
-    }
-});
 //------------------------------------------------------------------------------------ text to binary
 // Convert Button
 document.getElementById('convertBtn').addEventListener('click', function() {
@@ -67,15 +41,6 @@ document.getElementById('copyBtn').addEventListener('click', function() {
     }, 1500);
 
 });
-
-// Past Button
-document.getElementById('pastBtn').addEventListener('click', function() {
-    const textInput = document.getElementById('textInput');
-    
-    // Past the text from clipboard
-    navigator.clipboard.readText().then(clipText => textInput.value = clipText);
-});
-
 // Reset Button for Text Input
 document.getElementById('resetBtn').addEventListener('click', function() {
     document.getElementById('textInput').value = '';

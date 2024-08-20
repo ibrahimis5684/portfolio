@@ -26,7 +26,6 @@ html {
 body {
     font-family: 'poppins', sans-serif;
     background-image: linear-gradient(120deg, var(--liner-bg-0-2) 0%, var(--liner-bg-2-2) 100%);
-    min-width: 100%;
 }
 ::-webkit-scrollbar {
     width: .6rem;
@@ -67,7 +66,7 @@ h3 {
 }
 h5 {
     font-size: 1.6rem;
-    color: var(--hard-text-color);
+    color: var(--background-color);
     width: 100%;
     background: var(--liner-bg-1-1);
     padding: 1rem 5rem;
@@ -97,6 +96,9 @@ button:hover {
 }
 button:active {
     background: var(--thim-color);
+}
+.m-c-i {
+    width: 1.5rem;
 }
 /* navigation bar */
 nav {
@@ -141,9 +143,10 @@ nav {
 .side-menu {
     width: 25%;
     height: 92.6vh;
+    padding-bottom: 5rem;
     background-image: linear-gradient(150deg, var(--liner-bg-0-1) 0%, var(--liner-bg-1-1) 100%);
     box-shadow: #00000030 0px 10px 20px, #0000003b 0px 6px 6px;
-    overflow: hidden;
+    overflow: auto;
 }
 .side-menu ul li {
     font-size: 1.6rem;
@@ -183,11 +186,15 @@ nav {
     top: 0;
 }
 .un-cat-ul .un-cat-li {
-    margin-left: 8rem;
+    margin-left: 10.1rem;
+    padding: 1rem;
+}
+.un-cat-ul .un-cat-li:last-child {
+    margin-bottom: .1rem;
 }
 .un-cat-ul .un-cat-li::before {
     content: '';
-    width: 7%;
+    width: 6%;
     height: .1rem;
     background: var(--hard-text-color);
     position: absolute;
@@ -228,7 +235,7 @@ section {
 .body-box {
     width: 75%;
     height: 92.6vh;
-    padding: 5rem;
+    padding: 3rem 5rem;
 }
 .header h2 {
     text-shadow: .5rem .5rem .7rem var(--liner-bg-1-1);
@@ -236,11 +243,11 @@ section {
 .box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 5rem;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 #convertBtn {
-    height: 5rem;
     background: var(--background-color);
     color: var(--hard-text-color);
 }
@@ -253,7 +260,7 @@ section {
 }
 .input {
     width: 40rem;
-    height: 40rem;
+    height: 20rem;
     font-size: 1.6rem;
     padding: 1rem;
     border: none;
@@ -270,7 +277,7 @@ section {
 }
 .output {
     width: 40rem;
-    height: 40rem;
+    height: 20rem;
     font-size: 1.6rem;
     padding: 1rem;
     background: #f8f9fa;
