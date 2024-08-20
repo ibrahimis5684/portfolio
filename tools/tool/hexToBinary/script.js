@@ -18,42 +18,53 @@ document.querySelectorAll('li[id]').forEach(item => {
         }
     });
 });
-//------------------------------------------------------------------------------------ binary to text
+
+//------------------------------------------------------------------------------------ text to binary
 // Convert Button
-// Convert Button
+// Convert Button - Hex to Binary
 document.getElementById('convertBtn').addEventListener('click', function() {
-    const binaryInput = document.getElementById('binaryInput').value;
-    const textOutput = document.getElementById('textOutput');
+    const hexInput = document.getElementById('hexInput').value.trim();
+    const binaryOutput = document.getElementById('binaryOutput');
+    
+    // Validate the hex input
+    const isValidHex = /^#?[0-9A-Fa-f]{6}$/.test(hexInput);
+    if (!isValidHex) {
+        binaryOutput.textContent = 'Invalid hex input';
+        return;
+    }
 
-    let textResult = '';
-    const binaryArray = binaryInput.split(' ');
+    // Remove the leading "#" if present
+    const cleanedHex = hexInput.startsWith('#') ? hexInput.slice(1) : hexInput;
 
-    binaryArray.forEach(binaryChar => {
-        if (binaryChar.length === 8) {
-            textResult += String.fromCharCode(parseInt(binaryChar, 2));
-        }
-    });
+    // Convert hex to binary
+    let binaryResult = '';
+    for (let i = 0; i < cleanedHex.length; i += 2) {
+        const hexByte = cleanedHex.substring(i, i + 2);
+        const binaryByte = parseInt(hexByte, 16).toString(2).padStart(8, '0');
+        binaryResult += binaryByte + ' ';
+    }
 
-    textOutput.textContent = textResult;
+    // Output the binary result
+    binaryOutput.textContent = binaryResult.trim();
 });
 
 // Copy Button
 document.getElementById('copyBtn').addEventListener('click', function() {
-    const textOutput = document.getElementById('textOutput').textContent;
+    const binaryOutput = document.getElementById('binaryOutput').textContent;
     const copyBtn = document.getElementById('copyBtn');
-
+    
     // Create a temporary textarea to copy the text from
     const tempTextarea = document.createElement('textarea');
-    tempTextarea.value = textOutput;
+    tempTextarea.value = binaryOutput;
     document.body.appendChild(tempTextarea);
-
+    
     // Select the text and copy it to the clipboard
     tempTextarea.select();
     document.execCommand('copy');
-
+    
     // Remove the temporary textarea
     document.body.removeChild(tempTextarea);
-
+    
     // Change the button text and appearance to indicate copied
     copyBtn.innerHTML = 'Copied!';
     copyBtn.classList.add('copied');
@@ -64,8 +75,18 @@ document.getElementById('copyBtn').addEventListener('click', function() {
         copyBtn.classList.remove('copied');
     }, 1500);
 });
+
 // Reset Button
 document.getElementById('resetBtn').addEventListener('click', function() {
-    document.getElementById('binaryInput').value = '';
-    document.getElementById('textOutput').textContent = '';
+    document.getElementById('hexInput').value = '';
+    document.getElementById('binaryOutput').textContent = '';
+});
+
+// Color Picker Hex Input
+document.getElementById('hexToBinary').addEventListener('input', function() {
+    // Get the selected color's hex value
+    const hexColor = this.value;
+
+    // Set the hex value to the textarea
+    document.getElementById('hexInput').value = hexColor;
 });

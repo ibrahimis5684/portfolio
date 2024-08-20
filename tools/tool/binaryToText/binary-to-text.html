@@ -29,16 +29,17 @@
         <div class="side-menu">
             <h5>Tool Categories</h3>
             <ul>
-                <li id="binary" style="background: #007bff; color: #ffffff;">
+                <li id="binary">
                     <div class="cat-nam">
                         <i class="fa-duotone fa-solid fa-binary m-c-i"></i>
                         <p>binary</p>
                     </div>
-                    <i class="fa-solid fa-angle-right arrow-icon"></i>
+                    <i class="fa-solid fa-angle-right" style="display: none;"></i>
+                    <i class="fa-solid fa-chevron-down" style="display: block;"></i>
                 </li>
                 <ul class="un-cat-ul" style="display: block;">
                     <a href="../textToBinary/text-to-binary.html"><li id="ttb" class="un-cat-li">text to binary</li></a>
-                    <a href="binary-to-text.html"><li id="btt" class="un-cat-li" style="background: #007bff; color: #ffffff;">binary to text</li></a>
+                    <a href="binary-to-text.html"><li id="btt" class="un-cat-li" style="background: #007bff; color: #ffffff;">binary to text <i class="fa-solid fa-file-check"></i></li></a>
                 </ul>
                 <!-- -------- -->
                 <li id="hex">
@@ -47,10 +48,11 @@
                         <p>hexadecimal</p>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
                 </li>
                 <ul class="un-cat-ul" style="display: none;">
-                    <a href=""><li class="un-cat-li">hex to binary</li></a>
-                    <a href=""><li class="un-cat-li">hex to RGB</li></a>
+                    <a href="../hexToBinary/hex-to-binary.html"><li class="un-cat-li">hex to binary</li></a>
+                    <a href="../hexToRgb/hex-to-rgb.html"><li class="un-cat-li">hex to RGB</li></a>
                     <a href=""><li class="un-cat-li">hex + hex</li></a>
                     <a href=""><li class="un-cat-li">opposite color</li></a>
                 </ul>
@@ -61,6 +63,7 @@
                         <p>octal</p>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
                 </li>
                 <ul class="un-cat-ul" style="display: none;">
                     <a href=""><li class="un-cat-li">octal to binary</li></a>
@@ -75,6 +78,7 @@
                         <p>decimal</p>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
                 </li>
                 <ul class="un-cat-ul" style="display: none;">
                     <a href=""><li class="un-cat-li">dec to binary</li></a>

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../resources/img/html/title-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../resources/img/html/title-logo.png" type="image/x-icon">
     <title> Tools | IBRAHIM</title>
     <!-- css -->
-    <link rel="stylesheet" href="toolsCss/style.css">
+    <link rel="stylesheet" href="../../toolsCss/style.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
@@ -16,7 +16,7 @@
     <nav>
         <div class="row nav-row">
             <div class="logo-box">
-                <a href="../index.html"><img src="../resources/img/html/logo.png" alt="IBRAHIM"></a>
+                <a href="../../../index.html"><img src="../../../resources/img/html/logo.png" alt="IBRAHIM"></a>
             </div>
             <div class="search-box">
                 <input id="search" type="search" placeholder="search tools">
@@ -38,8 +38,8 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </li>
                 <ul class="un-cat-ul" style="display: none;">
-                    <a href="tool/textToBinary/text-to-binary.html"><li class="un-cat-li">text to binary</li></a>
-                    <a href="tool/binaryToText/binary-to-text.html"><li class="un-cat-li">binary to text</li></a>
+                    <a href="../textToBinary/text-to-binary.html"><li id="ttb" class="un-cat-li">text to binary</li></a>
+                    <a href="../binaryToText/binary-to-text.html"><li id="btt" class="un-cat-li">binary to text</li></a>
                 </ul>
                 <!-- -------- -->
                 <li id="hex">
@@ -47,12 +47,12 @@
                         <i class="fa-duotone fa-solid fa-hashtag m-c-i"></i>
                         <p>hexadecimal</p>
                     </div>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-angle-right" style="display: none;"></i>
+                    <i class="fa-solid fa-chevron-down" style="display: block;"></i>
                 </li>
-                <ul class="un-cat-ul" style="display: none;">
-                    <a href="tool/hexToBinary/hex-to-binary.html"><li class="un-cat-li">hex to binary</li></a>
-                    <a href="tool/hexToRgb/hex-to-rgb.html"><li class="un-cat-li">hex to RGB</li></a>
+                <ul class="un-cat-ul" style="display: block;">
+                    <a href="hex-to-binary.html"><li class="un-cat-li" style="background: #007bff; color: #ffffff;">hex to binary <i class="fa-solid fa-file-check"></i></li></a>
+                    <a href="../hexToRgb/hex-to-rgb.html"><li class="un-cat-li">hex to RGB</li></a>
                     <a href=""><li class="un-cat-li">hex + hex</li></a>
                     <a href=""><li class="un-cat-li">opposite color</li></a>
                 </ul>
@@ -89,9 +89,34 @@
             </ul>
         </div>
         <div class="body-box">
+            <div id="ttb-body">
+                <div class="header">
+                    <h2>hexadecimal to binary</h2>
+                </div>
+                <div class="box">
+                    <div class="left-t">
+                        <h3>hex <span style="color: #c9c9c9ee;">input</span></h3>
+                        <textarea id="hexInput" class="input" placeholder="Enter hex here..."></textarea>
+                        <label class="color-p-htb" for="hexToBinary"><i class="fa-solid fa-eye-dropper-half"></i></label>
+                        <input type="color" id="hexToBinary">
+                        <div class="button">
+                            <button class="btn" id="resetBtn"><i class="fa-duotone fa-solid fa-eraser"></i><p>reset</p></button>
+                            <button id="convertBtn">Convert <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
+                        </div>
+                    </div>
+                    <div class="right-b">
+                        <h3>binary <span style="color: #c9c9c9ee;">output</span></h3>
+                        <div id="binaryOutput" class="output hexToBinaryOutput"></div>
+                        <div class="button">
+                            <button class="btn" id="copyBtn"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- javascript -->
-    <script src="toolsJs/script.js"></script>
+    <script src="script.js"></script>
+    <script src="../../toolsJs/side-menu-tol.js"></script>
 </body>
 </html>
