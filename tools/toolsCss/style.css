@@ -218,7 +218,7 @@ section {
 }
 .box {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
@@ -235,7 +235,7 @@ section {
     background: var(--thim-hov-color);
 }
 .input {
-    width: 40rem;
+    width: 45rem;
     height: 20rem;
     font-size: 1.6rem;
     padding: 1rem;
@@ -252,7 +252,7 @@ section {
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 .output {
-    width: 40rem;
+    width: 45rem;
     height: 20rem;
     font-size: 1.6rem;
     padding: 1rem;
@@ -296,7 +296,7 @@ ul a {
     color: var(--hard-text-color);
     cursor: pointer;
     position: absolute;
-    top: 4rem;
+    top: -2.5rem;
     right: 1rem;
 }
 #hexInput,
@@ -332,4 +332,60 @@ ul a {
 }
 .rgb-rgba-c-btn {
     margin: 1rem auto;
+}
+.plus-box {
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-plus-value {
+    position: relative;
+}
+.input-plus {
+    width: 20rem;
+    height: 10rem;   
+}
+.output-plus{
+    width: 20rem;
+    height: 10rem;
+    overflow-x: auto;
+}
+.output-plus::-webkit-scrollbar {
+    height: .5rem;
+}
+#hex-hex2,
+#hex-hex1 {
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+}
+.fa-plus {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+.plus-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plus-btn {
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#colorIn,
+#colorOut {
+    outline: none;
+    border: none;
+    width: 45rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 4.6rem;
+    background: none;
 }

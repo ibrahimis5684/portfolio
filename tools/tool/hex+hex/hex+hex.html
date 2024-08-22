@@ -34,11 +34,11 @@
                         <i class="fa-duotone fa-solid fa-binary m-c-i"></i>
                         <p>binary</p>
                     </div>
-                    <i class="fa-solid fa-angle-right" style="display: none;"></i>
-                    <i class="fa-solid fa-chevron-down" style="display: block;"></i>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
                 </li>
-                <ul class="un-cat-ul" style="display: block;">
-                    <a href="text-to-binary.html"><li id="ttb" class="un-cat-li" style="background: #007bff; color: #ffffff;">text to binary <i class="fa-solid fa-file-check"></i></li></a>
+                <ul class="un-cat-ul" style="display: none;">
+                    <a href="../textToBinary/text-to-binary.html"><li id="ttb" class="un-cat-li">text to binary</li></a>
                     <a href="../binaryToText/binary-to-text.html"><li id="btt" class="un-cat-li">binary to text</li></a>
                 </ul>
                 <!-- -------- -->
@@ -47,13 +47,13 @@
                         <i class="fa-duotone fa-solid fa-hashtag m-c-i"></i>
                         <p>hexadecimal</p>
                     </div>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-angle-right" style="display: none;"></i>
+                    <i class="fa-solid fa-chevron-down" style="display: block;"></i>
                 </li>
-                <ul class="un-cat-ul" style="display: none;">
+                <ul class="un-cat-ul" style="display: block;">
                     <a href="../hexToBinary/hex-to-binary.html"><li class="un-cat-li">hex to binary</li></a>
                     <a href="../hexToRgb/hex-to-rgb.html"><li class="un-cat-li">hex to RGB</li></a>
-                    <a href="../hex+hex/hex+hex.html"><li class="un-cat-li">hex + hex</li></a>
+                    <a href="hex+hex.html"><li class="un-cat-li" style="background: #007bff; color: #ffffff;">hex + hex  <i class="fa-solid fa-file-check"></i></li></a>
                     <a href="../oppositeColor/opposite-color.html"><li class="un-cat-li">opposite color</li></a>
                 </ul>
                 <!-- -------- -->
@@ -91,25 +91,46 @@
         <div class="body-box">
             <div id="ttb-body">
                 <div class="header">
-                    <h2>text to binary</h2>
+                    <h2>hexadecimal + hexadecimal</h2>
                 </div>
                 <div class="box">
                     <div class="left-t">
-                        <h3>text <span style="color: #c9c9c9ee;">input</span></h3>
-                        <textarea id="textInput" class="input" placeholder="Enter text here..."></textarea>
+                        <h3>hex <span style="color: #c9c9c9ee;">input</span></h3>
+                        <div class="plus-box">
+                            <div class="input-plus-value">
+                                <textarea id="hexInput1" class="input input-plus" placeholder="Enter hex here..."></textarea>
+                                <label class="color-p-htb" for="hex-hex1"><i class="fa-solid fa-eye-dropper-half"></i></label>
+                                <input type="color" id="hex-hex1">
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                            <div class="input-plus-value">
+                                <textarea id="hexInput2" class="input input-plus" placeholder="Enter hex here..."></textarea>
+                                <label class="color-p-htb" for="hex-hex2"><i class="fa-solid fa-eye-dropper-half"></i></label>
+                                <input type="color" id="hex-hex2">
+                            </div>
+                        </div>
                         <div class="button">
                             <button class="btn" id="resetBtn"><i class="fa-duotone fa-solid fa-eraser"></i><p>reset</p></button>
-                            <button id="convertBtn">Convert <i class="fa-solid fa-arrow-down-1-9"></i></button>
+                            <button id="convertBtn">Convert <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
                         </div>
                     </div>
                     <div class="right-b">
-                        <h3>binary <span style="color: #c9c9c9ee;">output</span></h3>
-                        <div id="binaryOutput" class="output"></div>
-                        <div class="button">
-                            <button class="btn" id="copyBtn"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
+                        <div class="plus-box">
+                            <div class="output-value">
+                                <h3>binary <span style="color: #c9c9c9ee;">output</span></h3>
+                                <div id="binaryOutput" class="output output-plus"></div>
+                            </div>
+                            <div class="output-value">
+                                <h3>hex <span style="color: #c9c9c9ee;">output</span></h3>
+                                <div class="output output-plus" id="colorOutput"></div>
+                            </div>
+                        </div>
+                        <div class="button plus-btn">
+                            <button class="btn" id="copyBtnBinary"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
+                            <button class="btn" id="copyBtnColor"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
                         </div>
                     </div>
-                </div>
+                </div>                               
             </div>
         </div>
     </section>
