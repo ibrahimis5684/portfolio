@@ -12,6 +12,7 @@ html {
     --text-color: #999999;
     --hard-text-color: #474747;
     --thim-color: #007bff;
+    --side-menu-hov: #007bff85;
     --thim-hov-color: #0056b3;
     --zero-color: #181818;
     /* background */
@@ -50,6 +51,11 @@ body {
 }
 ul li {
     list-style: none;
+}
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--hard-text-color);
 }
 h2 {
     font-size: 3rem;
@@ -185,7 +191,7 @@ nav {
     justify-content: space-between;
 }
 .side-menu ul li:hover {
-    background: var(--thim-color);
+    background: var(--side-menu-hov);
     color: var(--background-color);
 }
 .side-menu ul li:active {
@@ -375,6 +381,9 @@ ul a {
     width: 22rem;
     height: 10rem;
     overflow-x: auto;
+}
+.binary-output-plus {
+    width: 47rem;
 }
 .output-plus::-webkit-scrollbar {
     height: .5rem;

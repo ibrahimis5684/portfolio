@@ -23,17 +23,17 @@
                 <input id="search" type="search" placeholder="search tools">
                 <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
             </div>
-            <div class="open-categories-menu">
+            <button class="open-categories-menu" popovertarget="open-side-menu">
                 <i class="fa-duotone fa-solid fa-bars-sort categories-icon"></i>
-            </div>
+            </button>
         </div>
     </nav>
     <!-- side menu -->
     <section>
-        <div class="side-menu">
+        <div class="side-menu" id="open-side-menu" popover>
             <h5>Tool Categories</h3>
             <ul>
-                <li id="binary">
+                <li id="binary" style="background: #007bff85; color: #ffffff;">
                     <div class="cat-nam">
                         <i class="fa-duotone fa-solid fa-binary m-c-i"></i>
                         <p>binary</p>
@@ -44,6 +44,7 @@
                 <ul class="un-cat-ul" style="display: block;">
                     <a href="text-to-binary.html"><li id="ttb" class="un-cat-li" style="background: #007bff; color: #ffffff;">text to binary <i class="fa-solid fa-file-check"></i></li></a>
                     <a href="../binaryToText/binary-to-text.html"><li id="btt" class="un-cat-li">binary to text</li></a>
+                    <a href="../binary+binary/binary+binary.html"><li class="un-cat-li">binary + binary</li></a>
                 </ul>
                 <!-- -------- -->
                 <li id="hex">

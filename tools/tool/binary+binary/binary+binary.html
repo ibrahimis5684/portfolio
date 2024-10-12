@@ -43,8 +43,8 @@
                 </li>
                 <ul class="un-cat-ul" style="display: block;">
                     <a href="../textToBinary/text-to-binary.html"><li id="ttb" class="un-cat-li">text to binary</li></a>
-                    <a href="binary-to-text.html"><li id="btt" class="un-cat-li" style="background: #007bff; color: #ffffff;">binary to text <i class="fa-solid fa-file-check"></i></li></a>
-                    <a href="../binary+binary/binary+binary.html"><li class="un-cat-li">binary + binary</li></a>
+                    <a href="../binaryToText/binary-to-text.html"><li id="btt" class="un-cat-li">binary to text</li></a>
+                    <a href="binary+binary.html"><li class="un-cat-li" style="background: #007bff; color: #ffffff;">binary + binary <i class="fa-solid fa-file-check"></i></li></a>
                 </ul>
                 <!-- -------- -->
                 <li id="hex">
@@ -96,25 +96,37 @@
         <div class="body-box">
             <div id="ttb-body">
                 <div class="header">
-                    <h2>binary to text</h2>
+                    <h2>binary + binary</h2>
                 </div>
                 <div class="box">
                     <div class="left-t">
                         <h3>binary <span style="color: #c9c9c9ee;">input</span></h3>
-                        <textarea id="binaryInput" class="input" placeholder="Enter binary here..."></textarea>
+                        <div class="plus-box">
+                            <div class="input-plus-value">
+                                <textarea id="binaryInput1" class="input input-plus" placeholder="Enter hex here..."></textarea>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                            <div class="input-plus-value">
+                                <textarea id="binaryInput2" class="input input-plus" placeholder="Enter hex here..."></textarea>
+                            </div>
+                        </div>
                         <div class="button">
                             <button class="btn" id="resetBtn"><i class="fa-duotone fa-solid fa-eraser"></i><p>reset</p></button>
-                            <button id="convertBtn">Convert <i class="fa-solid fa-arrow-down-a-z"></i></button>
+                            <button id="convertBtn">Convert <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
                         </div>
                     </div>
                     <div class="right-b">
-                        <h3>text <span style="color: #c9c9c9ee;">output</span></h3>
-                        <div id="textOutput" class="output"></div>
-                        <div class="button">
-                            <button class="btn" id="copyBtn"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
+                        <div class="plus-box">
+                            <div class="output-value">
+                                <h3>binary <span style="color: #c9c9c9ee;">output</span></h3>
+                                <div id="binaryOutput" class="output output-plus binary-output-plus"></div>
+                            </div>
+                        </div>
+                        <div class="button plus-btn">
+                            <button class="btn" id="copyBtnBinary"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
                         </div>
                     </div>
-                </div>
+                </div>                               
             </div>
         </div>
     </section>
