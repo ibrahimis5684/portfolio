@@ -3,6 +3,38 @@
     html {
         font-size: 55%;
     }
+    .sun {
+        width: 7rem;
+        height: 7rem;
+    }
+    .over-outer-line {
+        width: 46rem;
+        height: 46rem;
+    }
+    .outer-line {
+        width: 36rem;
+        height: 36rem;
+    }
+    
+    .middle-line {
+        width: 26rem;
+        height: 26rem;
+    }
+    
+    .inner-line {
+        width: 16rem;
+        height: 16rem;
+    }
+    .planet svg{
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+    .web-planet {
+        bottom: 0rem;
+    }
+    .work-detail {
+        height: 46rem;
+    }
 }
 
 /* max width 1024px */
@@ -76,11 +108,46 @@
     .work-menu-box .work-menu {
         left: -10.6rem;
     }
+    .sun {
+        width: 5rem;
+        height: 5rem;
+    }
+    .over-outer-line {
+        width: 41rem;
+        height: 41rem;
+    }
+    .outer-line {
+        width: 31rem;
+        height: 31rem;
+    }
+    
+    .middle-line {
+        width: 21rem;
+        height: 21rem;
+    }
+    
+    .inner-line {
+        width: 11rem;
+        height: 11rem;
+    }
+    .planet svg{
+        width: 4rem;
+        height: 4rem;
+    }
+    .web-planet {
+        bottom: -17rem;
+    }
+    .header-section {
+        flex-direction: column;
+    }
+    header {
+        height: 100vh;
+    }
 }
 /* max width 480px */
 @media only screen and (max-width:480px) {
     header {
-        height: 80vh;
+        height: 100vh;
     }
     header h1 {
         font-size: 5rem;
@@ -125,5 +192,11 @@
         flex-direction: column;
         align-items: start;
         gap: 2rem;
+    }
+    .web-planet {
+        bottom: 15rem;
+    }
+    .our-service-see-more-pop {
+        width: 80%;
     }
 }

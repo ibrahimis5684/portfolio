@@ -38,11 +38,6 @@ body {
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
 }
-::selection {
-    background-color: var(--thim-color);
-    color: var(--background-color);
-    -webkit-text-fill-color: var(--background-color);
-}
 /* resuble compunents */
 .row {
     padding: 0 10%;
@@ -68,12 +63,46 @@ ul li {
     -o-border-radius: .3rem;
     cursor: pointer;
     box-shadow: #00000026 0px 15px 25px, #0000000d 0px 5px 10px;
+    border: none;
+    outline: none;
 }
 .btn:hover {
     background: var(--thim-hov-color);
 }
 .btn:active {
     background: var(--thim-color);
+}
+.pop-btn {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--hard-text-color);
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop-btn:hover {
+    background: var(--thim-color);
+    color: var(--background-color);
+}
+.pop-btn:active {
+    background: var(--thim-hov-color);
+    color: var(--background-color);
 }
 .noti-hov {
     position: absolute;
@@ -525,31 +554,111 @@ header .order-now:hover ~ .download-cv-noti {
     opacity: 1;
 }
 /* ------------------------------------------------ */
-.animatad-icon{
-    width: 54rem;
-    height: 54rem;
+.solar-system-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.solar-system {
     position: relative;
+    width: 50rem;
+    height: 50rem;
 }
-.animatad-icon .laptop {
-    height: 54rem;
-}
-.animatad-icon .html,
-.animatad-icon .js,
-.animatad-icon .css {
-    width: 10rem;
-    left: 24rem;
-    top: 32rem;
+
+.sun {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8rem;
+    height: 8rem;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
-.animatad-icon .js {
+
+/* Orbit lines */
+.orbit-line {
     position: absolute;
-    left: 33rem;
-    top: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: .1rem solid #bebebe;
 }
-.animatad-icon .css {
+
+.over-outer-line {
+    width: 51rem;
+    height: 51rem;
+}
+.outer-line {
+    width: 41rem;
+    height: 41rem;
+}
+
+.middle-line {
+    width: 31rem;
+    height: 31rem;
+}
+
+.inner-line {
+    width: 21rem;
+    height: 21rem;
+}
+
+.orbit {
     position: absolute;
-    left: 10rem;
-    top: 10rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.over-outer {
+    animation: rotate-over-outer 20s linear infinite;
+    -webkit-animation: rotate-over-outer 20s linear infinite;
+}
+.outer {
+    animation: rotate-outer 15s linear infinite;
+    -webkit-animation: rotate-outer 15s linear infinite;
+}
+
+.middle {
+    animation: rotate-middle 10s linear infinite;
+    -webkit-animation: rotate-middle 10s linear infinite;
+}
+.inner {
+    animation: rotate-inner 6s linear infinite;
+    -webkit-animation: rotate-inner 6s linear infinite;
+}
+
+.planet svg{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+.planet-image {
+    animation: not-rotate 20s linear infinite;
+    -webkit-animation: not-rotate 20s linear infinite;
+}
+.planet-image-tow {
+    animation: not-rotate 15s linear infinite;
+    -webkit-animation: not-rotate 15s linear infinite;
+}
+.planet-image-three {
+    animation: not-rotate 10s linear infinite;
+    -webkit-animation: not-rotate 10s linear infinite;
+}
+.planet-image-four {
+    animation: not-rotate 6s linear infinite;
+    -webkit-animation: not-rotate 6s linear infinite;
+}
+.web-planet {
+    position: absolute;
+    bottom: 6rem;
+    font-weight: 900;
+    color: var(--background-color);
+    text-shadow: .2rem .2rem .2rem #5c5c5c;
 }
 /* ------------------------------------------------ */
 /* about section */
@@ -915,6 +1024,63 @@ table tr td:nth-child(1) {
 }
 .services-box .button .see-more:active {
     background: var(--thim-hov-color);
+}
+.our-service-see-more-pop {
+    width: 60%;
+    height: 60rem;
+    background: var(--background-color);
+    border-radius: .9rem;
+    -webkit-border-radius: .9rem;
+    -moz-border-radius: .9rem;
+    -ms-border-radius: .9rem;
+    -o-border-radius: .9rem;
+    border: none;
+    margin: auto;
+    &::backdrop{
+        background: #57575756;
+        backdrop-filter: blur(.2rem);
+    }
+}
+.pop-box {
+    width: 100%;
+    height: 100%;
+    padding-top: 5rem;
+}
+.language {
+    float: left;
+    margin: 1rem 3rem;
+    width: 10rem;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    border-color: var(--text-color);
+    outline-color: var(--thim-color);
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+.pera {
+    border-top: .1rem solid var(--hard-text-color);
+    padding: .5rem 3rem;
+}
+.work-detail {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 1.5;
+    height: 51rem;
+    overflow: auto;
+}
+.audio-btn-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 3rem 1rem;
 }
 /* ------------------------------------------------ */
 /* my work section */
@@ -1309,7 +1475,7 @@ footer {
 }
 footer .row {
     display: flex;
-    align-items: center;
+    align-items: self-start;
     justify-content: space-between;
 }
 footer .row p {
@@ -1317,6 +1483,28 @@ footer .row p {
     font-family: monospace;
     text-transform: capitalize;
 }
+footer .social-media-link-box,
+footer .busness-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    font-family: monospace;
+}
+footer .social-media-link-box a,
+footer .busness-box a {
+    color: var(--hard-text-color);
+    text-decoration: none;
+}
+footer .social-media-link-box a:hover,
+footer .busness-box a:hover {
+    text-decoration: underline;
+}
+.hfs {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: .5rem;
+}
+
 /* ------------------------------------------------ */
 /* loading style */
 .loading-box {

@@ -268,3 +268,20 @@ function copyToClipboard() {
         copyFeedback.style.display = "none";
     }, 2000);
 }
+//==========================================================popover our services
+document.querySelectorAll('.language').forEach(select => {
+    select.addEventListener('change', function() {
+        const contentDiv = this.nextElementSibling; // Get the next sibling div which contains content
+        
+        // Hide both content blocks initially
+        contentDiv.querySelector('.english-pera').style.display = 'none';
+        contentDiv.querySelector('.bengla-pera').style.display = 'none';
+
+        // Show the selected content
+        if (this.value === 'english') {
+            contentDiv.querySelector('.english-pera').style.display = 'block';
+        } else {
+            contentDiv.querySelector('.bengla-pera').style.display = 'block';
+        }
+    });
+});

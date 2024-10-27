@@ -30,7 +30,7 @@
     </nav>
     <!-- side menu -->
     <section>
-        <div class="side-menu" id="open-side-menu" popover>
+        <div class="side-menu" id="open-side-menu" popover style="height: 181vh;">
             <h5>Tool Categories</h3>
             <ul>
                 <li id="binary">
@@ -94,7 +94,7 @@
             </ul>
         </div>
         <div class="body-box">
-            <div id="ttb-body">
+            <div class="main-side side">
                 <div class="header">
                     <h2>hexadecimal to binary</h2>
                 </div>
@@ -102,8 +102,6 @@
                     <div class="left-t">
                         <h3>hex <span style="color: #c9c9c9ee;">input</span></h3>
                         <textarea id="hexInput" class="input" placeholder="Enter hex here..."></textarea>
-                        <label class="color-p-htb" for="hexToBinary" style="top: .5rem;"><i class="fa-solid fa-eye-dropper-half"></i></label>
-                        <input type="color" id="hexToBinary">
                         <div class="button">
                             <button class="btn" id="resetBtn"><i class="fa-duotone fa-solid fa-eraser"></i><p>reset</p></button>
                             <button id="convertBtn">Convert <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
@@ -111,15 +109,138 @@
                     </div>
                     <div class="right-b">
                         <h3>binary <span style="color: #c9c9c9ee;">output</span></h3>
-                        <div id="binaryOutput" class="output hexToBinaryOutput"></div>
+                        <div id="binaryOutput" class="output "></div>
                         <div class="button">
                             <button class="btn" id="copyBtn"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="ex-side side">
+                <div class="header">
+                    <h2>how to convat (hex to binary)</h2>
+                </div>
+                <div class="ex-main-box">
+                    <h3>Example Conversion</h3>
+                    <h4>Convert Each Hexadecimal Digit to its 4-bit Binary Equivalent</h4>
+                    <table border="1">
+                        <tr>
+                            <th>Hexadecimal</th>
+                            <th>Binary</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0001</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0010</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0011</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0100</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>0101</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>0110</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>0111</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>1001</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>1010</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>1011</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>1100</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>1101</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>1110</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>1111</td>
+                        </tr>
+                    </table>
+                    <h4>Explanation:</h4>
+                    <ul>
+                        <li><span class="markdown">0</span> in hexadecimal is <span class="markdown">0000</span> in binary.</li>
+                        <li><span class="markdown">1</span> in hexadecimal is <span class="markdown">0001</span> in binary.</li>
+                        <li><span class="markdown">2</span> in hexadecimal is <span class="markdown">0010</span> in binary.</li>
+                        <li><span class="markdown">3</span> in hexadecimal is <span class="markdown">0011</span> in binary.</li>
+                        <li><span class="markdown">4</span> in hexadecimal is <span class="markdown">0100</span> in binary.</li>
+                        <li><span class="markdown">5</span> in hexadecimal is <span class="markdown">0101</span> in binary.</li>
+                        <li><span class="markdown">6</span> in hexadecimal is <span class="markdown">0110</span> in binary.</li>
+                        <li><span class="markdown">7</span> in hexadecimal is <span class="markdown">0111</span> in binary.</li>
+                        <li><span class="markdown">8</span> in hexadecimal is <span class="markdown">1000</span> in binary.</li>
+                        <li><span class="markdown">9</span> in hexadecimal is <span class="markdown">1001</span> in binary.</li>
+                        <li><span class="markdown">A</span> in hexadecimal is <span class="markdown">1010</span> in binary (since <span class="markdown">A = 10</span> in decimal).</li>
+                        <li><span class="markdown">B</span> in hexadecimal is <span class="markdown">1011</span> in binary (since <span class="markdown">B = 11</span> in decimal).</li>
+                        <li><span class="markdown">C</span> in hexadecimal is <span class="markdown">1100</span> in binary (since <span class="markdown">C = 12</span> in decimal).</li>
+                        <li><span class="markdown">D</span> in hexadecimal is <span class="markdown">1101</span> in binary (since <span class="markdown">D = 13</span> in decimal).</li>
+                        <li><span class="markdown">E</span> in hexadecimal is <span class="markdown">1110</span> in binary (since <span class="markdown">E = 14</span> in decimal).</li>
+                        <li><span class="markdown">F</span> in hexadecimal is <span class="markdown">1111</span> in binary (since <span class="markdown">F = 15</span> in decimal).</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- footer section start -->
+    <footer>
+        <div class="row">
+            <div class="copyright">
+                <p>2024 Copyright &copy; Ibrahim.</p>
+            </div>
+            <div class="social-media-link-box">
+                <span class="hfs">social media</span>
+                <a target="_blank" href="https://www.facebook.com/ibrahim094is" class="sicial">facebook</a>
+                <a target="_blank" href="https://www.facebook.com/AmarBazarDootCom" class="sicial">facebook group</a>
+                <a target="_blank" href="https://www.instagram.com/ibrahim094is" class="sicial">instagram</a>
+                <a target="_blank" href="#" class="sicial">x</a>
+                <a target="_blank" href="https://www.youtube.com/@Ibrahim_gd" class="sicial">youtube</a>
+                <a target="_blank" href="#" class="sicial">whatsapp</a>
+            </div>
+            <div class="busness-box">
+                <span class="hfs">busness</span>
+                <a href="#" target="_blank">amar bazar.com</a>
+            </div>
+            <div class="sponser">
+                <p>powerBy : <span>N/A</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
     <!-- javascript -->
     <script src="script.js"></script>
     <script src="../../toolsJs/script.js"></script>

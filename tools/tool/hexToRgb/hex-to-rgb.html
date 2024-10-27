@@ -94,9 +94,9 @@
             </ul>
         </div>
         <div class="body-box">
-            <div id="ttb-body">
+            <div class="main-side side">
                 <div class="header">
-                    <h2>hexadecimal to rgb/rgba</h2>
+                    <h2>hex to rgb/rgba</h2>
                 </div>
                 <div class="box">
                     <div class="left-t">
@@ -124,13 +124,82 @@
                         <h3>Select Conversion Type</h3>
                         <button class="rgb-rgba-c-btn" id="convertToRgbBtn">RGB</button>
                         <button class="rgb-rgba-c-btn" id="convertToRgbaBtn">RGBA</button>
-                        <button class="rgb-rgba-c-btn" id="closeModalBtn">Close <i class="fa-regular fa-xmark"></i></button>
+                        <button class="rgb-rgba-c-btn" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
-                
+            </div>
+            <div class="ex-side side">
+                <div class="header">
+                    <h2>how to convat (hex to rgb/rgba)</h2>
+                </div>
+                <div class="ex-main-box">
+                    <h4>Example Hex Code: <span class="markdown">#4CAF50</span></h4>
+                    <ul>
+                        <li class="step">
+                            <h4 class="ex-step">Hex Code: <span class="markdown">#4CAF50</span></h4>
+                            <p class="ex">The hex code is broken down into three pairs:</p>
+                            <ul>
+                                <li>Red: <span class="markdown">4C</span></li>
+                                <li>Green: <span class="markdown">AF</span></li>
+                                <li>Blue: <span class="markdown">50</span></li>
+                            </ul>
+                        </li>
+                        <li class="step">
+                            <h4 class="ex-step">Convert Each Pair from Hex to Decimal:</h4>
+                            <p class="ex"><b>Red:</b> <span class="markdown">4C</span> in hexadecimal → Convert to decimal:</p>
+                            <ul>
+                                <li><span class="markdown">4C = 4 × 16 + 12 = 76</span></li>
+                                <li>Red = 76</li>
+                            </ul>
+                            <p class="ex"><b>Green:</b> <span class="markdown">AF</span> in hexadecimal → Convert to decimal:</p>
+                            <ul>
+                                <li><span class="markdown">AF = 10 × 16 + 15 = 175</span></li>
+                                <li>Green = 175</li>
+                            </ul>
+                            <p class="ex"><b>Blue:</b> <span class="markdown">50</span> in hexadecimal → Convert to decimal:</p>
+                            <ul>
+                                <li><span class="markdown">50 = 5 × 16 + 0 = 80</span></li>
+                                <li>Blue = 80</li>
+                            </ul>
+                        </li>
+                        <li class="step">
+                            <h4 class="ex-step">Resulting RGB Value:</h4>
+                            <p class="ex">The RGB equivalent of <span class="markdown">#4CAF50</span> is: <span class="markdown">rgb(76, 175, 80)</span></p>
+                        </li>
+                        <li class="step">
+                            <h4 class="ex-step">Resulting RGBA Value:</h4>
+                            <p class="ex">The RGBA equivalent of <span class="markdown">#4CAF50</span> with 50% opacity is: <span class="markdown">rgba(76, 175, 80, 0.5)</span></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+    <!-- footer section start -->
+    <footer>
+        <div class="row">
+            <div class="copyright">
+                <p>2024 Copyright &copy; Ibrahim.</p>
+            </div>
+            <div class="social-media-link-box">
+                <span class="hfs">social media</span>
+                <a target="_blank" href="https://www.facebook.com/ibrahim094is" class="sicial">facebook</a>
+                <a target="_blank" href="https://www.facebook.com/AmarBazarDootCom" class="sicial">facebook group</a>
+                <a target="_blank" href="https://www.instagram.com/ibrahim094is" class="sicial">instagram</a>
+                <a target="_blank" href="#" class="sicial">x</a>
+                <a target="_blank" href="https://www.youtube.com/@Ibrahim_gd" class="sicial">youtube</a>
+                <a target="_blank" href="#" class="sicial">whatsapp</a>
+            </div>
+            <div class="busness-box">
+                <span class="hfs">busness</span>
+                <a href="#" target="_blank">amar bazar.com</a>
+            </div>
+            <div class="sponser">
+                <p>powerBy : <span>N/A</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
     <!-- javascript -->
     <script src="script.js"></script>
     <script src="../../toolsJs/script.js"></script>

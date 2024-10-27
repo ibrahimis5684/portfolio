@@ -1,31 +1,51 @@
-//------------------------------------------------------------------------------------ text to binary
-// Convert Button
-// Convert Button - Hex to Binary
-document.getElementById('convertBtn').addEventListener('click', function() {
-    const hexInput = document.getElementById('hexInput').value.trim();
-    const binaryOutput = document.getElementById('binaryOutput');
-    
-    // Validate the hex input
-    const isValidHex = /^#?[0-9A-Fa-f]{6}$/.test(hexInput);
-    if (!isValidHex) {
-        binaryOutput.textContent = 'Invalid hex input';
-        return;
+    // Function to convert hex to binary without extra spaces
+    function hexToBinary(hex) {
+        return hex.split('').map(function(hexDigit) {
+            switch(hexDigit.toLowerCase()) {
+                case '0': return '0000';
+                case '1': return '0001';
+                case '2': return '0010';
+                case '3': return '0011';
+                case '4': return '0100';
+                case '5': return '0101';
+                case '6': return '0110';
+                case '7': return '0111';
+                case '8': return '1000';
+                case '9': return '1001';
+                case 'a': return '1010';
+                case 'b': return '1011';
+                case 'c': return '1100';
+                case 'd': return '1101';
+                case 'e': return '1110';
+                case 'f': return '1111';
+                case '.': return '.';
+                default: return ''; // Invalid character
+            }
+        }).join(''); // Remove spaces between binary digits
     }
 
-    // Remove the leading "#" if present
-    const cleanedHex = hexInput.startsWith('#') ? hexInput.slice(1) : hexInput;
+    // Event listener for convert button
+    document.getElementById('convertBtn').addEventListener('click', function() {
+        const hexInput = document.getElementById('hexInput').value.trim();
+        const binaryOutput = hexToBinary(hexInput);
+        document.getElementById('binaryOutput').innerText = binaryOutput;
+    });
 
-    // Convert hex to binary
-    let binaryResult = '';
-    for (let i = 0; i < cleanedHex.length; i += 2) {
-        const hexByte = cleanedHex.substring(i, i + 2);
-        const binaryByte = parseInt(hexByte, 16).toString(2).padStart(8, '0');
-        binaryResult += binaryByte + ' ';
-    }
+    // Event listener for reset button
+    document.getElementById('resetBtn').addEventListener('click', function() {
+        document.getElementById('hexInput').value = '';
+        document.getElementById('binaryOutput').innerText = '';
+    });
 
-    // Output the binary result
-    binaryOutput.textContent = binaryResult.trim();
-});
+    // Event listener for copy button
+    document.getElementById('copyBtn').addEventListener('click', function() {
+        const binaryOutput = document.getElementById('binaryOutput').innerText;
+        navigator.clipboard.writeText(binaryOutput).then(function() {
+            console.log('Binary output copied to clipboard');
+        }, function(err) {
+            console.error('Error copying binary output: ', err);
+        });
+    });
 
 // Copy Button
 document.getElementById('copyBtn').addEventListener('click', function() {

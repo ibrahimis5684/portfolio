@@ -30,7 +30,7 @@
     </nav>
     <!-- side menu -->
     <section>
-        <div class="side-menu" id="open-side-menu" popover>
+        <div class="side-menu" id="open-side-menu" popover style="height: 146vh;">
             <h5>Tool Categories</h3>
             <ul>
                 <li id="binary" style="background: #007bff85; color: #ffffff;">
@@ -94,25 +94,27 @@
             </ul>
         </div>
         <div class="body-box">
-            <div id="ttb-body">
+            <div class="main-side side">
                 <div class="header">
                     <h2>binary + binary</h2>
                 </div>
                 <div class="box">
                     <div class="left-t">
-                        <h3>binary <span style="color: #c9c9c9ee;">input</span></h3>
                         <div class="plus-box">
+                            <h3>First binary <span style="color: #c9c9c9ee;">input</span></h3>
                             <div class="input-plus-value">
                                 <textarea id="binaryInput1" class="input input-plus" placeholder="Enter hex here..."></textarea>
                             </div>
-                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="plus-box" style="margin-top: 1.5rem;">
+                            <h3>Second binary <span style="color: #c9c9c9ee;">input</span></h3>
                             <div class="input-plus-value">
                                 <textarea id="binaryInput2" class="input input-plus" placeholder="Enter hex here..."></textarea>
                             </div>
                         </div>
                         <div class="button">
                             <button class="btn" id="resetBtn"><i class="fa-duotone fa-solid fa-eraser"></i><p>reset</p></button>
-                            <button id="convertBtn">Convert <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
+                            <button id="convertBtn">calculate <i class="fa-sharp fa-solid fa-equals" style="rotate: 90deg;"></i></button>
                         </div>
                     </div>
                     <div class="right-b">
@@ -126,10 +128,122 @@
                             <button class="btn" id="copyBtnBinary"><i class="fa-duotone fa-solid fa-clone"></i><p>Copy</p></button>
                         </div>
                     </div>
-                </div>                               
+                </div>
+            </div>
+            <div class="ex-side side">
+                <div class="header">
+                    <h2>how to calculate (binary + binary)</h2>
+                </div>
+                <div class="ex-main-box">
+                    <h4>Binary Addition Rules:</h4>
+                    <ul>
+                        <li class="step">0 + 0 = 0</li>
+                        <li class="step">0 + 1 = 1</li>
+                        <li class="step">1 + 0 = 1</li>
+                        <li class="step">1 + 1 = 10 (This is <span class="markdown">0</span> with a carry of <span class="markdown">1</span> )</li>
+                    </ul>
+                    <h4>Example: Add <span class="markdown">1011</span> and <span class="markdown">1101</span> in Binary</h4>
+                    <ul>
+                        <li class="step">
+                            <h4 class="ex-step">Step 1: Align the binary numbers</h4>
+                            <div class="math">1 0 1 1</div>
+                            <div class="math">1 1 0 1</div>
+                        </li>
+                        <li class="step">
+                            <h4 class="ex-step">Step 2: Add the numbers bit by bit</h4>
+                            <ul>
+                                <li>Starting from the rightmost bit:</li>
+                            </ul>
+                            <div class="ex-box">
+                                <ul>
+                                    <li>1 + 1 = 10 (which is 0, carry 1)</li>
+                                    <li>1 + 0 + 1 (carry) = 10 (which is 0, carry 1)</li>
+                                    <li>0 + 1 + 1 (carry) = 10 (which is 0, carry 1)</li>
+                                    <li>1 + 1 + 1 (carry) = 11 (which is 1, carry 1)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <h4 class="ex-step">Step 3: Write the result and handle any carry</h4>
+                            <ul>
+                                <li>The result is:</li>
+                            </ul>
+                            <div class="ex-box">
+                                <ul>
+                                    <li>11000</li>
+                                </ul>
+                            </div>
+                            <h4>Final Answer:</h4>
+                            <ul>
+                                <li><span class="markdown">1011 + 1101</span> = <span class="markdown">11000</span> in binary.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Step-by-Step Breakdown:</h4>
+                    <table border="1">
+                        <tr>
+                            <th>Bits Added</th>
+                            <th>Result</th>
+                            <th>Carry</th>
+                        </tr>
+                        <tr>
+                            <td>1 + 1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1 + 0 + carry 1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0 + 1 + carry 1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1 + 1 + carry 1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Carry remaining</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="ex">
+                        This is similar to decimal addition, except that binary only uses <span class="markdown">0</span> and <span class="markdown">1</span>, so when the sum reaches <span class="markdown">2</span> (binary <span class="markdown">10</span>), you carry over to the next column.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+    <!-- footer section start -->
+    <footer>
+        <div class="row">
+            <div class="copyright">
+                <p>2024 Copyright &copy; Ibrahim.</p>
+            </div>
+            <div class="social-media-link-box">
+                <span class="hfs">social media</span>
+                <a target="_blank" href="https://www.facebook.com/ibrahim094is" class="sicial">facebook</a>
+                <a target="_blank" href="https://www.facebook.com/AmarBazarDootCom" class="sicial">facebook group</a>
+                <a target="_blank" href="https://www.instagram.com/ibrahim094is" class="sicial">instagram</a>
+                <a target="_blank" href="#" class="sicial">x</a>
+                <a target="_blank" href="https://www.youtube.com/@Ibrahim_gd" class="sicial">youtube</a>
+                <a target="_blank" href="#" class="sicial">whatsapp</a>
+            </div>
+            <div class="busness-box">
+                <span class="hfs">busness</span>
+                <a href="#" target="_blank">amar bazar.com</a>
+            </div>
+            <div class="sponser">
+                <p>powerBy : <span>N/A</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
     <!-- javascript -->
     <script src="script.js"></script>
     <script src="../../toolsJs/script.js"></script>
